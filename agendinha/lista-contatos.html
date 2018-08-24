@@ -12,9 +12,7 @@
         <script src="js/controllers/listaUsuarioCtrl.js"></script>
     </head>
     <body ng-controller="listaUsuarioCtrl">
-        
-        <div class="jumbotron">
-          
+        <div class="jumbotron"
             <form name="usuarioForm">
                 <h3>{{cadastro}}</h3>
                 {{message}}
@@ -36,8 +34,7 @@
                 <label>Ativo</label> <input type="checkbox" id="txt-ativo"  ng-model="usuario.ativo" >
             </form>
             <hr/>
-            
-
+        
             <button ng-click="adicionarUsuario(usuario)" class="btn btn-primary" ng-disabled="usuarioForm.$invalid">Adicionar</button>
             <button ng-click="apagarUsuario(usuarios)" class="btn btn-danger" ng-disabled="!isUsuarioSelecionado(usuarios)" >Apagar</button>
                 
