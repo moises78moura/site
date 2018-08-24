@@ -1,4 +1,3 @@
-/**Já havia feito uma alteração pelo eclipse */
 /**
  * Arquivo de configuração
  */

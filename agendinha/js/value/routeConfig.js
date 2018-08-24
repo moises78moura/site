@@ -1,4 +1,3 @@
-/**Testando um commit vindo do eclipse, vai dar merger */
 /**
  * Configuração de rotas
  */
