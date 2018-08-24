@@ -4,6 +4,20 @@
     border-radius:5px;
     margin-top: 20px;
     margin-bottom: 20px;
+} 
+
+.ui-alert2{
+    background-color: #F2DEDE;
+    padding: 20px;
+    border-radius:5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ui-alert-title2{
+    color: #AF4341;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .ui-alert-title{

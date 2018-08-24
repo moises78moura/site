@@ -8,12 +8,26 @@
 .table{
     margin-top: 20px;
 }
+
 .form-control{
     margin-bottom: 5px;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
+
+.form-control2{
+    margin-bottom: 5px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-control-checkbox2{
+    margin-bottom: 5px;
+    margin-left: auto;
+}
+
 .form-control-checkbox{
     margin-bottom: 5px;
     margin-left: auto;
