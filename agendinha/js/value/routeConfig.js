@@ -1,3 +1,6 @@
+
+
+/**Testando um commit vindo do eclipse, vai dar merger */
 angular.module("appAgendinha").config(function($routeProvider){
     $routeProvider.when("/usuarios", {
         templateUrl: "view/usuarios.html",
@@ -9,3 +12,4 @@ angular.module("appAgendinha").config(function($routeProvider){
         controller: "listaUsuarioCtrl"
     });
 });
+
