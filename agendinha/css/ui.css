@@ -14,6 +14,12 @@
     margin-bottom: 20px;
 }
 
+.ui-alert-title2{
+    color: #AF4341;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .ui-alert-title{
     color: #AF4341;
     font-weight: bold;

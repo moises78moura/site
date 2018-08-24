@@ -1,3 +1,6 @@
+/**
+ * Configuração de rotas
+ */
 angular.module("appAgendinha").config(function($routeProvider){
     $routeProvider.when("/usuarios", {
         templateUrl: "view/usuarios.html",
