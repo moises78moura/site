@@ -9,13 +9,10 @@
         <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="css/app.css" />
         <link rel="stylesheet" type="text/css" href="css/ui.css" />
-
         <script src="lib/angular/angular.js"></script>
         <script src="lib/angular/angular-messages.js"></script>
         <script src="lib/angular/angular-route.js" ></script>
-
         <script src="lib/ui/ui.js"></script>
-
         <script src="js/app.js"></script>
         <script src="js/controllers/listaUsuarioCtrl.js"></script>
         <script src="js/services/usuarioApiService.js"></script>
@@ -29,7 +26,9 @@
         
     </head>
     <body >
+        <!--Esse arquivo é o principal do aplicativo-->
         <div ng-view></div>
+        <!--Já tinha feito um commit anterior, agora vou forcar esse pra ver-->
         <div ng-include="'view/rodape.html'"></div>
     </body>
     

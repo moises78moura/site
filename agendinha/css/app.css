@@ -16,7 +16,7 @@
     margin-right: auto;
 }
 
-.form-control{
+.form-control2{
     margin-bottom: 5px;
     width: 70%;
     margin-left: auto;
@@ -33,4 +33,9 @@
 
 .negrito{
     font-weight: bold;
+}
+
+.classeTesteCss{
+    font-weight: bold;
+    background-color: coral;
 }
