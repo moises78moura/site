@@ -2,18 +2,14 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
         <title>Lista de Usuarios</title>
-        <!-- C:\desenvolvimento\javascript\agendinha-front\lib\angular-->
-
+        <!-- C:\desenvolvimento\javascript\agendinha\lib\angular-->
         <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="css/app.css" />
-
         <script src="lib/angular/angular.js"></script>
         <script src="lib/angular/angular-messages.js"></script>
         <script src="js/app.js"></script>
         <script src="js/controllers/listaUsuarioCtrl.js"></script>
-
     </head>
     <body ng-controller="listaUsuarioCtrl">
         
@@ -40,11 +36,13 @@
                 <label>Ativo</label> <input type="checkbox" id="txt-ativo"  ng-model="usuario.ativo" >
             </form>
             <hr/>
+            
+
             <button ng-click="adicionarUsuario(usuario)" class="btn btn-primary" ng-disabled="usuarioForm.$invalid">Adicionar</button>
             <button ng-click="apagarUsuario(usuarios)" class="btn btn-danger" ng-disabled="!isUsuarioSelecionado(usuarios)" >Apagar</button>
                 
             <hr/>
-
+        
             <div  ng-show="usuarios.length > 0">
                 <h3>{{lista}}</h3>
 
