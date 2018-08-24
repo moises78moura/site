@@ -1,0 +1,24 @@
+    {{message}}
+    <div ng-show="usuarioForm.nome.$error.required && usuarioForm.nome.$dirty" class="alert alert-danger">Por favor, preencha o nome!</div>    
+    <div ng-show="usuarioForm.nome.$error.minlength" class="alert alert-danger">O campo nome deve ter no mínimo 2 caracteres!</div>    
+
+    <div ng-show="usuarioForm.email.$error.required && usuarioForm.email.$dirty" class="alert alert-danger">Por favor, preencha o email!</div>
+    <div ng-show="usuarioForm.email.$error.pattern" class="alert alert-danger">Email inválido, preencha corretamente!</div>    
+    <div ng-show="usuarioForm.papel.$invalid && usuarioForm.papel.$dirty" class="alert alert-danger">Por favor, selecione o papel do usuario!</div>    
+    <div ng-show="usuarioForm.senha.$invalid && usuarioForm.senha.$dirty" class="alert alert-danger">Por favor, preencha a senha!</div>    
+    <form name="usuarioForm">
+        
+        <input type="text" id="txt-nome" name="nome" ng-model="usuario.nome" ng-required="true" ng-minlength="2" class="form-control" placeholder="Nome" >
+        
+        <input type="text" id="txt-nascimento" name="nascimento" ng-model="usuario.nascimento" ng-required="true" class="form-control" placeholder="Nascimento" ui-date >
+        
+        <input type="text" id="txt-email" name="email" ng-model="usuario.email" ng-required="true" ng-pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" class="form-control" placeholder="Email">
+        <select ng-model="usuario.perfilUsuario" name="papel" ng-required="true" ng-options="perfil for perfil in perfis" class="form-control">
+            <option value="" >Selecione um Perfil</option>
+        </select>
+        <!--  <input type="text" id="txt-papel" ng-model="usuario.papelUsuario" class="form-control" placeholder="Papel usuario" >-->
+        <input type="password" id="txt-senha" name="senha" ng-required="true" ng-model="usuario.senha" class="form-control" placeholder="Senha" >
+        <label>Ativo</label> <input type="checkbox" id="txt-ativo"  ng-model="usuario.ativo" >
+    </form>
+    <hr/>
+    <button ng-click="adicionarUsuario(usuario)" class="btn btn-primary" ng-disabled="usuarioForm.$invalid">Adicionar</button>
