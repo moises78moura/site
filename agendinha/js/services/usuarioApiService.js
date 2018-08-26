@@ -1,10 +1,11 @@
 angular.module("appAgendinha").factory("usuarioApi", function($http, config){
     var _getUsuarios = function(){
-        return $http.get(config.baseUrl+"/agendinha/rest/usuario/listar");
+        var retorno = $http.get(config.baseUrl+"/agendinha-core/rest/usuario/listar");
+        return retorno;
     };
     
     var _saveUsuario = function(usuario){
-        return $http.post(config.baseUrl+"/agendinha/rest/usuario/add", usuario);
+        return $http.post(config.baseUrl+"/agendinha-core/rest/usuario/add", usuario);
     };
     
 

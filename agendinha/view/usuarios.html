@@ -1,5 +1,5 @@
 <div class="jumbotron">
-    <h3>{{cadastro}}</h3>
+    <h3>{{lista}}</h3>
 
 <!--     <ui-accordions>
 
@@ -28,12 +28,11 @@
 </div>-->
 
     <div  ng-show="usuarios.length > 0">
-        <h3>{{lista}}</h3>
-
-
+      
         <input type="text"  class="form-control" ng-model="criterioDeBusca" placeholder="O que você está buscando? " />
 
         <table class="table table-striped">
+            
             <tr>
                 <th></th>
                 <th><a ng-click="ordernarPor('nome');">Nome</a></th>
@@ -42,13 +41,15 @@
                 <th>Ativo</th>
             </tr>
             <tr ng-class="{'selecionado negrito': usuario.selecionado}" ng-repeat="usuario in usuarios | filter: criterioDeBusca | orderBy:criterioOrdenacao:direcaoOrdenacao">
-                <td><input type="checkbox" ng-model="usuario.selecionado" ></td>
-                <td>{{usuario.nome | camelCase}} </td>
+                <td><input type="checkbox" ng-model="usuario.selecionado" /></td>
+                <td><a href="#/detalharUsuario/{{contato.id}}" >{{usuario.nome | camelCase}} </a></td>
                 <td>{{usuario.email}}</td>
                 <td>{{usuario.perfilUsuario}}</td>
                 <td>{{usuario.ativo | trueFalseString}}</td>
             </tr>
         </table>
+        <hr/>
+        <a  class="btn btn-primary"  href="#/novoUsuario" >Novo</a>
     </div>
     
 </div>

@@ -1,0 +1,23 @@
+   
+   <div class="jumbotron">
+        <h3>{{cadastro}}</h3>
+   
+            <form name="usuarioForm">
+            <label>Nome</label>
+            <input type="text" id="txt-nome" name="nome" ng-model="usuario.nome" ng-disable="true"  class="form-control" placeholder="Nome" >
+            
+            <!-- <input type="text" id="txt-nascimento" name="nascimento" ng-model="usuario.nascimento" ng-required="true" class="form-control" placeholder="Nascimento" ui-date >-->
+            <label>Nome</label>
+            <input type="text" id="txt-email" name="email" ng-model="usuario.email" ng-disable="true"  ng-pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" class="form-control" placeholder="Email">
+            <label>Nome</label>
+            <select ng-model="usuario.perfilUsuario" name="papel" ng-disable="true"  class="form-control">
+                <option value="" >Selecione um Perfil</option>
+            </select>
+
+            <!--  <input type="text" id="txt-papel" ng-model="usuario.papelUsuario" class="form-control" placeholder="Papel usuario" >-->
+            
+            <label>Ativo</label> <input type="checkbox" id="txt-ativo" ng-disable="true" ng-model="usuario.ativo" >
+        </form>
+        <hr/>
+        <button ng-click="#/usuarios" class="btn btn-primary">Voltar</button>
+   </div>
