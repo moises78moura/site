@@ -1,8 +1,10 @@
-angular.module("appAgendinha").controller("UsuarioController", function($scope,$http,$location, $routeParams, usuarioApi, perfis){
-    console.log($routeParams.id);
+angular.module("appAgendinha").controller("UsuarioController", 
+    function($scope,$http,$location, usuarioApi, perfis, usuario){
+ 
     $scope.cadastro = "Cadastro de Usuarios";
     $scope.perfis  = perfis.data;
-
+    $scope.usuario = usuario.data;
+    
    /* var carregarPerfis = function(){
         perfilApi.getPerfis().success(function(data){
             $scope.perfis = data;
@@ -19,9 +21,10 @@ angular.module("appAgendinha").controller("UsuarioController", function($scope,$
         }).error(function(data, status){
             $scope.message = "Ocorreu um erro: " + data;
         });
-    
         //$scope.usuarios.push(angular.copy(usuario));
     };
     
+
+
    // carregarPerfis();
 });

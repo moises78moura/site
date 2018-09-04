@@ -1,3 +1,5 @@
+@import "material/iconfont/material-icons.css";
+
 .jumbotron{
     width: 800px;
     margin-top: 20px;
@@ -39,4 +41,45 @@
 
 .negrito{
     font-weight: bold;
+}
+
+.red {
+    color:red;
+}
+
+.green {
+    color:green;
+}
+
+.div-buttons{
+    width: 100%;
+    text-align: left !important;
+}
+
+.wd-60-pc-txt-align-left{
+    width: 70%; 
+    text-align: left;
+}
+
+.wd-47-pc-txt-align-left{
+    width: 47%; 
+    text-align: left;
+}
+
+.wd-40-pc-txt-align-left{
+    width: 40%; 
+    text-align: left;
+}
+.wd-5-pc-txt-align-left{
+    width: 5%; 
+    text-align: left;
+}
+.wd-2-pc-txt-align-left{
+    width: 2%; 
+    text-align: left;
+}
+
+.wd-2-pc-txt-align-center{
+    width: 2% !important; 
+    text-align: center !important;
 }

@@ -32,24 +32,47 @@
         <input type="text"  class="form-control" ng-model="criterioDeBusca" placeholder="O que você está buscando? " />
 
         <table class="table table-striped">
-            
-            <tr>
-                <th></th>
-                <th><a ng-click="ordernarPor('nome');">Nome</a></th>
-                <th>Email</th>
-                <th>Perfil</th>
-                <th>Ativo</th>
-            </tr>
-            <tr ng-class="{'selecionado negrito': usuario.selecionado}" ng-repeat="usuario in usuarios | filter: criterioDeBusca | orderBy:criterioOrdenacao:direcaoOrdenacao">
-                <td><input type="checkbox" ng-model="usuario.selecionado" /></td>
-                <td><a href="#/detalharUsuario/{{contato.id}}" >{{usuario.nome | camelCase}} </a></td>
-                <td>{{usuario.email}}</td>
-                <td>{{usuario.perfilUsuario}}</td>
-                <td>{{usuario.ativo | trueFalseString}}</td>
-            </tr>
-        </table>
+                <thead>
+                    <tr>
+                        <th class="wd-60-pc-txt-align-left" ><a ng-click="ordernarPor('nome');">Nome</a></th>
+                        <th class="wd-40-pc-txt-align-left" >Email</th>
+                        <th class="wd-5-pc-txt-align-left" >Perfil</th>
+                        <th class="wd-2-pc-txt-align-center">Ativo</th>
+                        <th class="wd-2-pc-txt-align-left" ></th>
+                        <th class="wd-2-pc-txt-align-left" ></th>
+                        <th class="wd-2-pc-txt-align-left" ></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr ng-class="{'selecionado negrito': usuario.selecionado}" ng-repeat="usuario in usuarios | filter: criterioDeBusca | orderBy:criterioOrdenacao:direcaoOrdenacao">
+                        <td class="wd-60-pc-txt-align-left">{{usuario.nome | camelCase}}</td>
+                        <td class="wd-40-pc-txt-align-left">{{usuario.email}}</td>
+                        <td class="wd-5-pc-txt-align-left"> {{usuario.perfilUsuario}}</td>
+                        <td class="wd-2-pc-txt-align-center" ng-class="{ 'green' :usuario.ativo, 'red': !usuario.ativo}" title="{{usuario.ativo ? 'Usuario ativo' : 'Usuario Inativo'}}" ><i class="material-icons">{{usuario.ativo ? 'check_box' : 'indeterminate_check_box'}}</i></td>
+                        
+                        <td class="wd-2-pc-txt-align-center" >
+                            <a href="#/detalharUsuario/{{usuario.id}}" title="Alterar Usuário">
+                                <i class="material-icons">edit</i>
+                            </a>
+                        </td>
+                        <td class="wd-2-pc-txt-align-center" >
+                            <a href="" title="Detalhar Usuário">
+                                <i class="material-icons">details</i>
+                            </a>
+                        </td>
+                        <td class="wd-2-pc-txt-align-center" >
+                            <a href="" title="Excluir Usuário">
+                                <i class="material-icons">delete</i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         <hr/>
-        <a  class="btn btn-primary"  href="#/novoUsuario" >Novo</a>
+        <div class="div-buttons">
+            <a href="#/novoUsuario" title="Novo Usuário" ><i class="material-icons ">add_circle</i></a>
+        </div>
     </div>
     
 </div>

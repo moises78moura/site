@@ -1,4 +1,4 @@
-angular.module("appAgendinha").controller("listaUsuarioCtrl", function($scope,$http, usuarioApi, perfilApi, usuarios){
+angular.module("appAgendinha").controller("listaUsuarioCtrl", function($scope, usuarios){
     $scope.cadastro = "Cadastro de Usuarios";
     $scope.lista = "Lista de Usuarios";
     $scope.usuarios= usuarios.data;
